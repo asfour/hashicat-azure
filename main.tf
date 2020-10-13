@@ -99,7 +99,7 @@ resource "azurerm_virtual_machine" "catapp" {
   delete_os_disk_on_termination = "true"
 
   tags {
-    Department tag  =  devops
+    Department tag  =  "devops"
   }
 
   storage_image_reference {
