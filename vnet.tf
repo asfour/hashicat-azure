@@ -1,12 +1,3 @@
-provider "azurerm" {
-  features {}
-}
-
-resource "azurerm_resource_group" "myresourcegroup" {
-  name     = "${var.prefix}-workshop"
-  location = var.location
-}
-
 module "network" {
   source              = "app.terraform.io/Hosin-training/network/azurerm"
   version             = "3.2.2"
@@ -21,4 +12,3 @@ module "network" {
     costcenter  = "it"
   }
 
-  depends_on = [azurerm_resource_group.myresourcegroup]
